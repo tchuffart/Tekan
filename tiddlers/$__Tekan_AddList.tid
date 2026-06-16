@@ -50,7 +50,7 @@ type: text/vnd.tiddlywiki
 <div class="list">
 	<div style="background:rgba(0,0,0,.15);border-radius:3px;min-height:30px;padding:4px;margin:0 5px;">
 	<$button style="width:100%;text-align:left;background:transparent;border:none;color:#fff;font-size:14px;font-weight:bold;padding:7px;cursor:pointer;" set="$:/state/addnewlist" setTo="list">
-	+ Ajouter une liste
+	<<tekan-lingo AddList/Button>>
 	</$button>
 	</div>
 </div>
