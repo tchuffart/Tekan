@@ -26,7 +26,7 @@ type: text/vnd.tiddlywiki
 \end
 
 <$set name="addcardstate" value={{$:/state/AddCard}}>
-<$list filter="[<addcardstate>compare:string:neq<currentList>]" variable="ignore">
+<$list filter="[<addcardstate>compare:string:ne<currentList>]" variable="ignore">
 	<$button class="tc-btn-invisible" set="$:/state/AddCard" setTo=<<currentList>>><<tekan-lingo AddCard/Button>></$button>
 </$list>
 <$list filter="[<addcardstate>compare:string:eq<currentList>]" variable="ignore">

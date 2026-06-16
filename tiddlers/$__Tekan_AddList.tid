@@ -46,7 +46,7 @@ type: text/vnd.tiddlywiki
 </style>
 
 <$set name="addliststate" value={{$:/state/addnewlist}}>
-<$list filter="[<addliststate>compare:string:neq[list]]" variable="ignore">
+<$list filter="[<addliststate>compare:string:ne[list]]" variable="ignore">
 <div class="list">
 	<div style="background:rgba(0,0,0,.15);border-radius:3px;min-height:30px;padding:4px;margin:0 5px;">
 	<$button style="width:100%;text-align:left;background:transparent;border:none;color:#fff;font-size:13px;padding:7px;cursor:pointer;" set="$:/state/addnewlist" setTo="list">
