@@ -5,7 +5,6 @@ tags: $:/Tekan
 title: $:/Tekan/AddList
 type: text/vnd.tiddlywiki
 
-
 \define boardnametag()
 [[$(currentBoard)$]]
 \end
@@ -61,7 +60,7 @@ type: text/vnd.tiddlywiki
 <div class="list list-wrapper-add">
     
     <$keyboard key="enter" actions=<<AddList>> tag="div">
-	<$edit-text default=<<tekan-lingo AddList/Default>> class="list-name-input" tiddler="$:/state/newlisttemp" placeholder=<<tekan-lingo AddList/Placeholder>> tag="input" focus="yes"/>
+	<$edit-text default={{$:/language/plugins/tesseract/tekan/AddList/Default}} class="list-name-input" tiddler="$:/state/newlisttemp" placeholder={{$:/language/plugins/tesseract/tekan/AddList/Placeholder}} tag="input" focus="yes"/>
     </$keyboard>
    
 	<$button class="smallgreenbutton" actions=<<AddList>>><<tekan-lingo AddList/AddButton>></$button>

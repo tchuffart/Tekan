@@ -6,7 +6,6 @@ tags: $:/Tikan/EditCardModal
 title: $:/Tikan/EditCardModal/AddComment
 type: text/vnd.tiddlywiki
 
-
 	<div class="view-comment-area">
     <$list filter="[tag<currentCard>tag[$:/Comment]]">    
     <li class="view-comment">{{!!text}}
@@ -31,10 +30,10 @@ type: text/vnd.tiddlywiki
                 <div class="comment-box">
   				<$edit-text 
                 	class="comment-box-input" 
-                    placeholder=<<tekan-lingo Comment/Placeholder>>
+                    placeholder={{$:/language/plugins/tesseract/tekan/Comment/Placeholder}}
                     style="overflow: hidden; overflow-wrap: break-word; height: 75px;"
                     tiddler="$:/state/editcardComments"
-                    default=<<tekan-lingo Comment/Default>>
+                    default={{$:/language/plugins/tesseract/tekan/Comment/Default}}
 
                     tag="textarea" 
                     autoHeight="yes" 

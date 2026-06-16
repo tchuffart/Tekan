@@ -5,7 +5,6 @@ tags: $:/Tikan/EditCardModal
 title: $:/Tikan/EditCardModal/SideBar
 type: text/vnd.tiddlywiki
 
-
 <div class="window-module u-clearfix">
 		<$button class="button-link" style="background: #EE6E73;color: #eee;"
         		tooltip=<<tekan-lingo Card/Sidebar/DeleteTooltip>>><<tekan-lingo Card/Sidebar/Delete>>
@@ -37,7 +36,7 @@ type: text/vnd.tiddlywiki
             attributes="$:/Tikan/EditCardModal/SideBar/DueDateAttributes"
             tiddler=<<currentCard>>
             field="duedate"
-            placeholder=<<tekan-lingo Card/Sidebar/DueDate>>/>
+            placeholder={{$:/language/plugins/tesseract/tekan/Card/Sidebar/DueDate}}/>
 		<$button
         	class="button-link" tooltip=<<tekan-lingo Card/Sidebar/DoneTooltip>>>
             <<tekan-lingo Card/Sidebar/Done>>

@@ -5,7 +5,6 @@ tags: $:/Tikan/EditCardModal/SideBar
 title: $:/Tikan/EditCardModal/SideBar/LabelModal
 type: text/vnd.tiddlywiki
 
-
 \define addLabel()
 <$action-setfield $tiddler=<<currentCard>> $field="label" $value=<<currentTiddler>>/>
 <$action-sendmessage $message="tm-close-tiddler"/>

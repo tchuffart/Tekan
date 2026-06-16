@@ -6,7 +6,6 @@ tags: $:/Tekan/Main/ListFooter
 title: $:/Tekan/AddCard
 type: text/vnd.tiddlywiki
 
-
 \define newHereButtonTags()
 [[$(currentList)$]]
 \end
@@ -33,7 +32,7 @@ type: text/vnd.tiddlywiki
 <$reveal type="match" state="$:/state/AddCard" text=<<currentList>>>
       	
   <$keyboard key="ctrl+enter" actions=<<addCard>> tag="div">
-  <$edit-text  autoHeight="yes" focus="yes" placeholder=<<tekan-lingo AddCard/Placeholder>> default=<<tekan-lingo AddCard/Default>> tiddler="$:/NewNote"/>
+  <$edit-text  autoHeight="yes" focus="yes" placeholder={{$:/language/plugins/tesseract/tekan/AddCard/Placeholder}} default={{$:/language/plugins/tesseract/tekan/AddCard/Default}} tiddler="$:/NewNote"/>
   </$keyboard>
 		
         <$button class="smallgreenbutton" actions=<<addCard>>><<tekan-lingo AddCard/Add>></$button>

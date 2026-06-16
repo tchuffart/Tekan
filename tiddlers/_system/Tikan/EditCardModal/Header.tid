@@ -5,7 +5,6 @@ tags: $:/Tikan/EditCardModal
 title: $:/Tikan/EditCardModal/Header
 type: text/vnd.tiddlywiki
 
-
 <span class="window-header-icon icon-lg icon-card"></span>
 	<div class="window-title">
     <$reveal state="$:/state/editcardtitle" type="nomatch" text="show">

@@ -5,7 +5,6 @@ tags: $:/Tikan/EditCardModal
 title: $:/Tikan/EditCardModal/Checklist
 type: text/vnd.tiddlywiki
 
-
 <div class="checklistarea">
 					<div class="window-module-title window-module-title-no-divider">
 					    	<span class="window-module-title-icon icon-lg icon-comment"></span>
@@ -13,7 +12,7 @@ type: text/vnd.tiddlywiki
 					</div>
 				    	<div class="u-gutter">
                         	    <$keyboard key="enter" actions=<<addchecklistitem>> tag="span">
-						      <$edit-text class="checklist-new-item-text checklist-text-h" placeholder=<<tekan-lingo Checklist/Placeholder>>  tag="input" tiddler="$:/state/checklistitem" default=<<tekan-lingo Checklist/Default>>/>
+						      <$edit-text class="checklist-new-item-text checklist-text-h" placeholder={{$:/language/plugins/tesseract/tekan/Checklist/Placeholder}} tag="input" tiddler="$:/state/checklistitem" default={{$:/language/plugins/tesseract/tekan/Checklist/Default}}/>
                               </$keyboard>
 						      <$button class="smallgreenbutton" actions=<<addchecklistitem>>><<tekan-lingo Checklist/Add>></$button>
 				       </div>
