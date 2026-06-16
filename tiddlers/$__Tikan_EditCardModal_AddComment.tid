@@ -20,7 +20,7 @@ type: text/vnd.tiddlywiki
 <div class="window-module add-comment-section">
     	<div class="window-module-title window-module-title-no-divider">
 	    	<span class="window-module-title-icon icon-lg icon-comment"></span>
-	        <h3><<tekan-lingo Comment/Title>></h3>
+	        <h3><$text text={{$:/language/plugins/tesseract/tekan/Comment/Title}}/></h3>
 	</div>
     
     
@@ -42,6 +42,6 @@ type: text/vnd.tiddlywiki
                  </div>
                  
             </div>
-           <$button class="smallgreenbutton" actions=<<addComment>>><<tekan-lingo Comment/Save>></$button>
+           <$button class="smallgreenbutton" actions=<<addComment>>><$text text={{$:/language/plugins/tesseract/tekan/Comment/Save}}/></$button>
     </div>
 </div>

@@ -8,13 +8,13 @@ type: text/vnd.tiddlywiki
 <div class="checklistarea">
 					<div class="window-module-title window-module-title-no-divider">
 					    	<span class="window-module-title-icon icon-lg icon-comment"></span>
-					        <h3><<tekan-lingo Checklist/Title>></h3>
+					        <h3><$text text={{$:/language/plugins/tesseract/tekan/Checklist/Title}}/></h3>
 					</div>
 				    	<div class="u-gutter">
                         	    <$keyboard key="enter" actions=<<addchecklistitem>> tag="span">
 						      <$edit-text class="checklist-new-item-text checklist-text-h" placeholder={{$:/language/plugins/tesseract/tekan/Checklist/Placeholder}} tag="input" tiddler="$:/state/checklistitem" default={{$:/language/plugins/tesseract/tekan/Checklist/Default}}/>
                               </$keyboard>
-						      <$button class="smallgreenbutton" actions=<<addchecklistitem>>><<tekan-lingo Checklist/Add>></$button>
+						      <$button class="smallgreenbutton" actions=<<addchecklistitem>>><$text text={{$:/language/plugins/tesseract/tekan/Checklist/Add}}/></$button>
 				       </div>
 						<div class="u-gutter">
 						            <$list filter="[tag<currentCard>!tag[done]!tag[archive]!tag[$:/Comment]]">

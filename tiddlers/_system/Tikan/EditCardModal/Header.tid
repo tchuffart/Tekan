@@ -7,27 +7,29 @@ type: text/vnd.tiddlywiki
 
 <span class="window-header-icon icon-lg icon-card"></span>
 	<div class="window-title">
-    <$reveal state="$:/state/editcardtitle" type="nomatch" text="show">
+    <$set name="editcardtitle" value={{$:/state/editcardtitle}}>
+    <$list filter="[<editcardtitle>compare:string:ne[show]]" variable="ignore">
         <$tiddler tiddler=<<currentCard>>>
-    	<$button 
-                		class="tc-btn-invisible" 
-                    	style="text-align:left; font-weight:bold;font-size:18px; width:100%" 
+    	<$button
+                		class="tc-btn-invisible"
+                    	style="text-align:left; font-weight:bold;font-size:18px; width:100%"
                         set="$:/state/editcardtitle" setTo="show">
-                <$wikify 
-                    name="cardtext" 
-                    type="text/x-markdown" 
-                    text={{!!text}} 
+                <$wikify
+                    name="cardtext"
+                    type="text/x-markdown"
+                    text={{!!text}}
                     output="html">
                     <<cardtext>>
                 </$wikify>
         </$button>
         </$tiddler>
-    </$reveal>
-    <$reveal state="$:/state/editcardtitle" type="match" text="show">
+    </$list>
+    <$list filter="[<editcardtitle>compare:string:eq[show]]" variable="ignore">
     	<$edit-text class="mod-card-back-title overflow-hidden" tiddler=<<currentCard>> rows="2" minHeight="auto" focus="yes"/>
-    </$reveal>
-	<div><<tekan-lingo Card/InList>> "<b><$transclude tiddler=<<currentList>> field="caption"><$view tiddler=<<currentList>> field="text"/></$transclude></b>"
-    <$list filter="[<currentCard>!label[]]"> <<tekan-lingo Card/WithLabel>> "<b><$view tiddler=<<currentCard>> field="label"/></b>"</$list>
+    </$list>
+    </$set>
+	<div><$text text={{$:/language/plugins/tesseract/tekan/Card/InList}}/> "<b><$transclude tiddler=<<currentList>> field="caption"><$view tiddler=<<currentList>> field="text"/></$transclude></b>"
+    <$list filter="[<currentCard>!label[]]"> <$text text={{$:/language/plugins/tesseract/tekan/Card/WithLabel}}/> "<b><$view tiddler=<<currentCard>> field="label"/></b>"</$list>
     	<$list filter="[<currentCard>tag[archive]]">{{Archived||$:/core/ui/TagTemplate}}</$list>	
     </div>
 	</div>
