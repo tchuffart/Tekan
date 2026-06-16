@@ -5,6 +5,7 @@ tags: $:/Tekan
 title: $:/Tekan/AddList
 type: text/vnd.tiddlywiki
 
+\define lingo-base() $:/language/plugins/tesseract/tekan/
 \define boardnametag()
 [[$(currentBoard)$]]
 \end
@@ -50,7 +51,7 @@ type: text/vnd.tiddlywiki
  <div class="list">
 		<div class="semitransparent"> 
         <$button class="semitransparentborderless" style="width:100%;text-align:left;" set="$:/state/addnewlist" setTo="list">     
-        Add a list...
+        <<lingo AddList/Button>>
         </$button>
 		</div>
 </div>
@@ -60,10 +61,10 @@ type: text/vnd.tiddlywiki
 <div class="list list-wrapper-add">
     
     <$keyboard key="enter" actions=<<AddList>> tag="div">
-	<$edit-text default="New list" class="list-name-input" tiddler="$:/state/newlisttemp" placeholder="Add a list…" tag="input" focus="yes"/>
+	<$edit-text default=<<lingo AddList/Default>> class="list-name-input" tiddler="$:/state/newlisttemp" placeholder=<<lingo AddList/Placeholder>> tag="input" focus="yes"/>
     </$keyboard>
    
-	<$button class="smallgreenbutton" actions=<<AddList>>>Add list</$button>
+	<$button class="smallgreenbutton" actions=<<AddList>>><<lingo AddList/AddButton>></$button>
     <$button class="tc-btn-invisible" style="padding: 5px;fill: #999;" actions=<<CancelList>>>{{$:/core/images/close-button}}</$button>
    
     

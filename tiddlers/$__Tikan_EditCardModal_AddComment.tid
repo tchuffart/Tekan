@@ -6,6 +6,7 @@ tags: $:/Tikan/EditCardModal
 title: $:/Tikan/EditCardModal/AddComment
 type: text/vnd.tiddlywiki
 
+\define lingo-base() $:/language/plugins/tesseract/tekan/
 	<div class="view-comment-area">
     <$list filter="[tag<currentCard>tag[$:/Comment]]">    
     <li class="view-comment">{{!!text}}
@@ -20,7 +21,7 @@ type: text/vnd.tiddlywiki
 <div class="window-module add-comment-section">
     	<div class="window-module-title window-module-title-no-divider">
 	    	<span class="window-module-title-icon icon-lg icon-comment"></span>
-	        <h3>Add Comment</h3>
+	        <h3><<lingo Comment/Title>></h3>
 	</div>
     
     
@@ -30,10 +31,11 @@ type: text/vnd.tiddlywiki
                 <div class="comment-box">
   				<$edit-text 
                 	class="comment-box-input" 
-                    placeholder="Write a comment…" 
-                    style="overflow: hidden; overflow-wrap: break-word; height: 75px;" 
-                    tiddler="$:/state/editcardComments"          
-                    default="No Comments"  
+                    placeholder=<<lingo Comment/Placeholder>>
+                    style="overflow: hidden; overflow-wrap: break-word; height: 75px;"
+                    tiddler="$:/state/editcardComments"
+                    default=<<lingo Comment/Default>>
+
                     tag="textarea" 
                     autoHeight="yes" 
                     minHeight="auto"
@@ -41,6 +43,6 @@ type: text/vnd.tiddlywiki
                  </div>
                  
             </div>
-           <$button class="smallgreenbutton" actions=<<addComment>>>Save</$button>
+           <$button class="smallgreenbutton" actions=<<addComment>>><<lingo Comment/Save>></$button>
     </div>
 </div>
