@@ -4,5 +4,5 @@ title: $:/Tekan/Macros
 type: text/vnd.tiddlywiki
 
 \define tekan-lingo(title)
-<$transclude tiddler="$:/language/plugins/tesseract/tekan/$(title)$" field="text" mode="inline"/>
+<$view tiddler="$:/language/plugins/tesseract/tekan/$(title)$" field="text" format="text"/>
 \end
