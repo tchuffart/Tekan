@@ -71,13 +71,13 @@ content: "&#x270e;";
     <$set name="currentBoard" value={{$:/Tekan/CurrentBoard}}>
     <$list filter="[tag<currentBoard>!has[draft.of]]" variable="currentList">
 		<div class="list">
-         {{||$:/Tekan/Main/ListCards}}
-       	 {{||$:/Tekan/Main/ListFooter}} 
+         {{$:/Tekan/Main/ListCards}}
+       	 {{$:/Tekan/Main/ListFooter}} 
 		</div>
     </$list>
-      	{{||$:/Tekan/AddList}}
-   		{{||$:/Tekan/RearrangeLists}}
-        {{||$:/Tekan/Import}}
+      	{{$:/Tekan/AddList}}
+   		{{$:/Tekan/RearrangeLists}}
+        {{$:/Tekan/Import}}
   	</$set>
 	</div>
     {{$:/Tekan/Sidebar}}

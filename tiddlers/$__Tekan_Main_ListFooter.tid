@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 								<div class="tc-droppable-placeholder">
 								&nbsp;
 								</div>
-								<footer>{{||$:/Tekan/AddCard}}</footer>
+								<footer>{{$:/Tekan/AddCard}}</footer>
 						</$droppable>
             </div>
             </$tiddler>
