@@ -26,10 +26,10 @@ type: text/vnd.tiddlywiki
 \end
 
 <$set name="addcardstate" value={{$:/state/AddCard}}>
-<$list filter="[<addcardstate>!match<currentList>]" variable="ignore">
+<$list filter="[<currentList>!match<addcardstate>]" variable="ignore">
 	<$button class="tc-btn-invisible" set="$:/state/AddCard" setTo=<<currentList>>><<tekan-lingo AddCard/Button>></$button>
 </$list>
-<$list filter="[<addcardstate>match<currentList>]" variable="ignore">
+<$list filter="[<currentList>match<addcardstate>]" variable="ignore">
 	<$keyboard key="ctrl+enter" actions=<<addCard>> tag="div">
 	<$edit-text autoHeight="yes" focus="yes" placeholder={{$:/language/plugins/tesseract/tekan/AddCard/Placeholder}} default={{$:/language/plugins/tesseract/tekan/AddCard/Default}} tiddler="$:/NewNote"/>
 	</$keyboard>

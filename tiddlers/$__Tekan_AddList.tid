@@ -45,7 +45,7 @@ type: text/vnd.tiddlywiki
 }
 </style>
 
-<$list filter="[{$:/state/addnewlist}!match[list]]" variable="ignore">
+<$list filter="[[list]!match{$:/state/addnewlist}]" variable="ignore">
 <div class="list">
 	<div style="background:rgba(0,0,0,.15);border-radius:3px;min-height:30px;padding:4px;margin:0 5px;">
 	<$button style="width:100%;text-align:left;background:transparent;border:none;color:#fff;font-size:13px;padding:7px;cursor:pointer;" set="$:/state/addnewlist" setTo="list">
@@ -55,7 +55,7 @@ type: text/vnd.tiddlywiki
 </div>
 </$list>
 
-<$list filter="[{$:/state/addnewlist}match[list]]" variable="ignore">
+<$list filter="[[list]match{$:/state/addnewlist}]" variable="ignore">
 <div class="list list-wrapper-add">
 	<$keyboard key="enter" actions=<<AddList>> tag="div">
 	<$edit-text default={{$:/language/plugins/tesseract/tekan/AddList/Default}} class="list-name-input" tiddler="$:/state/newlisttemp" placeholder={{$:/language/plugins/tesseract/tekan/AddList/Placeholder}} tag="input" focus="yes"/>
