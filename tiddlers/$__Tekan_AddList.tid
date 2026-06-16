@@ -13,7 +13,6 @@ type: text/vnd.tiddlywiki
 <$set name="random" filter="[[]make[RANDOM(10)]]">
 <$action-createtiddler $basetitle=<<random>> text={{$:/state/newlisttemp}} tags=<<boardnametag>> caption={{$:/state/newlisttemp}}/>
 </$set>
-<$action-listops $tiddler=<<currentBoard>> $subfilter="[<boardandlist>]"/>
 <$action-setfield $tiddler="$:/state/newlisttemp" text=""/>
 <$action-setfield $tiddler="$:/state/addnewlist" text=""/>
 \end
@@ -48,8 +47,8 @@ type: text/vnd.tiddlywiki
 
 <$reveal state="$:/state/addnewlist" type="nomatch" text="list">
  <div class="list">
-		<div class="semitransparent"> 
-        <$button class="semitransparentborderless" style="width:100%;text-align:left;" set="$:/state/addnewlist" setTo="list">     
+		<div style="background:rgba(0,0,0,.15);border-radius:3px;min-height:30px;padding:4px;margin:0 5px;">
+        <$button style="width:100%;text-align:left;background:transparent;border:none;color:#fff;font-size:13px;padding:7px;cursor:pointer;" set="$:/state/addnewlist" setTo="list">
         <<tekan-lingo AddList/Button>>
         </$button>
 		</div>
