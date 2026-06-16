@@ -56,7 +56,7 @@ type: text/vnd.tiddlywiki
 </div>
 </$list>
 <$list filter="[<addliststate>compare:string:eq[list]]" variable="ignore">
-<div class="list list-wrapper-add">
+<div class="list list-wrapper-add" style="height:auto;align-self:flex-start;">
 	<$keyboard key="enter" actions=<<AddList>> tag="div">
 	<$edit-text default={{$:/language/plugins/tesseract/tekan/AddList/Default}} class="list-name-input" tiddler="$:/state/newlisttemp" placeholder={{$:/language/plugins/tesseract/tekan/AddList/Placeholder}} tag="input" focus="yes"/>
 	</$keyboard>
