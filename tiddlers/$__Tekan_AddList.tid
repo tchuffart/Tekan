@@ -50,7 +50,7 @@ type: text/vnd.tiddlywiki
 <div class="list">
 	<div style="background:rgba(0,0,0,.15);border-radius:3px;min-height:30px;padding:4px;margin:0 5px;">
 	<$button style="width:100%;text-align:left;background:transparent;border:none;color:#fff;font-size:14px;font-weight:bold;padding:7px;cursor:pointer;" set="$:/state/addnewlist" setTo="list">
-	<<tekan-lingo AddList/Button>>
+	<$text text={{$:/language/plugins/tesseract/tekan/AddList/Button}}/>
 	</$button>
 	</div>
 </div>
@@ -60,7 +60,7 @@ type: text/vnd.tiddlywiki
 	<$keyboard key="enter" actions=<<AddList>> tag="div">
 	<$edit-text default={{$:/language/plugins/tesseract/tekan/AddList/Default}} class="list-name-input" tiddler="$:/state/newlisttemp" placeholder={{$:/language/plugins/tesseract/tekan/AddList/Placeholder}} tag="input" focus="yes"/>
 	</$keyboard>
-	<$button class="smallgreenbutton" actions=<<AddList>>><<tekan-lingo AddList/AddButton>></$button>
+	<$button class="smallgreenbutton" actions=<<AddList>>><$text text={{$:/language/plugins/tesseract/tekan/AddList/AddButton}}/></$button>
 	<$button class="tc-btn-invisible" style="padding: 5px;fill: #999;" actions=<<CancelList>>>{{$:/core/images/close-button}}</$button>
 </div>
 </$list>
