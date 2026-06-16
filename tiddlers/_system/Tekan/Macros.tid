@@ -1,0 +1,8 @@
+created: 20170930000000000
+tags: $:/tags/Macro
+title: $:/Tekan/Macros
+type: text/vnd.tiddlywiki
+
+\define tekan-lingo(title)
+{{$:/language/plugins/tesseract/tekan/$(title)$}}
+\end

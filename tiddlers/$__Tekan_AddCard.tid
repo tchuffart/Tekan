@@ -6,7 +6,7 @@ tags: $:/Tekan/Main/ListFooter
 title: $:/Tekan/AddCard
 type: text/vnd.tiddlywiki
 
-\define lingo-base() $:/language/plugins/tesseract/tekan/
+
 \define newHereButtonTags()
 [[$(currentList)$]]
 \end
@@ -27,16 +27,16 @@ type: text/vnd.tiddlywiki
 \end
 
 <$reveal type="nomatch" state="$:/state/AddCard" text=<<currentList>>>
-	<$button class="tc-btn-invisible" set="$:/state/AddCard" setTo=<<currentList>>><<lingo AddCard/Button>></$button>
+	<$button class="tc-btn-invisible" set="$:/state/AddCard" setTo=<<currentList>>><<tekan-lingo AddCard/Button>></$button>
 </$reveal>
 
 <$reveal type="match" state="$:/state/AddCard" text=<<currentList>>>
       	
   <$keyboard key="ctrl+enter" actions=<<addCard>> tag="div">
-  <$edit-text  autoHeight="yes" focus="yes" placeholder=<<lingo AddCard/Placeholder>> default=<<lingo AddCard/Default>> tiddler="$:/NewNote"/>
+  <$edit-text  autoHeight="yes" focus="yes" placeholder=<<tekan-lingo AddCard/Placeholder>> default=<<tekan-lingo AddCard/Default>> tiddler="$:/NewNote"/>
   </$keyboard>
 		
-        <$button class="smallgreenbutton" actions=<<addCard>>><<lingo AddCard/Add>></$button>
+        <$button class="smallgreenbutton" actions=<<addCard>>><<tekan-lingo AddCard/Add>></$button>
         <$button class="tc-btn-invisible" style="margin: 0 5px;"  actions=<<cancelCard>>>{{$:/core/images/close-button}}</$button>
       	
    

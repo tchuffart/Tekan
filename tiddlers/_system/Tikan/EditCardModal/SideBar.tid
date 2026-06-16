@@ -5,42 +5,42 @@ tags: $:/Tikan/EditCardModal
 title: $:/Tikan/EditCardModal/SideBar
 type: text/vnd.tiddlywiki
 
-\define lingo-base() $:/language/plugins/tesseract/tekan/
+
 <div class="window-module u-clearfix">
 		<$button class="button-link" style="background: #EE6E73;color: #eee;"
-        		tooltip=<<lingo Card/Sidebar/DeleteTooltip>>><<lingo Card/Sidebar/Delete>>
+        		tooltip=<<tekan-lingo Card/Sidebar/DeleteTooltip>>><<tekan-lingo Card/Sidebar/Delete>>
 			<$action-deletetiddler $tiddler=<<currentCard>>/>
             <$action-deletetiddler $filter="[tag<currentCard>]"/>
 			<$action-sendmessage $message="tm-close-tiddler"/>
             <$action-listops $tiddler=<<currentList>> $subfilter="+[remove<currentCard>]"/>
 		</$button>
-		<$button class="button-link" tooltip=<<lingo Card/Sidebar/ArchiveTooltip>>><<lingo Card/Sidebar/Archive>>
+		<$button class="button-link" tooltip=<<tekan-lingo Card/Sidebar/ArchiveTooltip>>><<tekan-lingo Card/Sidebar/Archive>>
 			<$action-listops $tiddler=<<currentCard>> $tags="archive"/>
             <$action-listops $tiddler=<<currentList>> $subfilter="+[remove<currentCard>]"/>
 		</$button>
         <$button
         	class="button-link"
             actions=<<archivechecklist>>
-            tooltip=<<lingo Card/Sidebar/ArchiveChecklistTooltip>>>
-            <<lingo Card/Sidebar/ArchiveChecklist>>
+            tooltip=<<tekan-lingo Card/Sidebar/ArchiveChecklistTooltip>>>
+            <<tekan-lingo Card/Sidebar/ArchiveChecklist>>
         </$button>
         <$button
-        	class="button-link" tooltip=<<lingo Card/Sidebar/LabelTooltip>>>
+        	class="button-link" tooltip=<<tekan-lingo Card/Sidebar/LabelTooltip>>>
            		<$action-sendmessage
                 $message="tm-modal"
                 $param="$:/Tikan/EditCardModal/SideBar/LabelModal"
                 currentCard=<<currentCard>>/>
-            <<lingo Card/Sidebar/Label>>
+            <<tekan-lingo Card/Sidebar/Label>>
  		</$button>
         <$edit-date
         	class="button-link"
             attributes="$:/Tikan/EditCardModal/SideBar/DueDateAttributes"
             tiddler=<<currentCard>>
             field="duedate"
-            placeholder=<<lingo Card/Sidebar/DueDate>>/>
+            placeholder=<<tekan-lingo Card/Sidebar/DueDate>>/>
 		<$button
-        	class="button-link" tooltip=<<lingo Card/Sidebar/DoneTooltip>>>
-            <<lingo Card/Sidebar/Done>>
+        	class="button-link" tooltip=<<tekan-lingo Card/Sidebar/DoneTooltip>>>
+            <<tekan-lingo Card/Sidebar/Done>>
 			<$action-sendmessage $message="tm-close-tiddler"/>
             <$action-sendmessage $message="tm-auto-save-wiki"/>
             <$action-setfield $tiddler="$:/state/editcardtitle" text=""/>

@@ -1,0 +1,10 @@
+created: 20170930000000000
+tags: $:/tags/StartupAction/MainWindow
+title: $:/Tekan/StartupAction
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/PageTemplate]!has[draft.of]]">
+<$action-setfield tags="TwelloMode"/>
+</$list>
+<$action-setfield $tiddler="$:/Tekan/Main" tags="$:/tags/PageTemplate"/>
+<$action-listops $tiddler="$:/Tekan/Substyles" $tags="$:/tags/Stylesheet"/>

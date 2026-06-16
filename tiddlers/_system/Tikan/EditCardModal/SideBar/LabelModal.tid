@@ -5,7 +5,7 @@ tags: $:/Tikan/EditCardModal/SideBar
 title: $:/Tikan/EditCardModal/SideBar/LabelModal
 type: text/vnd.tiddlywiki
 
-\define lingo-base() $:/language/plugins/tesseract/tekan/
+
 \define addLabel()
 <$action-setfield $tiddler=<<currentCard>> $field="label" $value=<<currentTiddler>>/>
 <$action-sendmessage $message="tm-close-tiddler"/>
@@ -15,7 +15,7 @@ type: text/vnd.tiddlywiki
  
  <div class="pop-over" style="right: auto;top: auto;position: relative;width: 100%;height: 100%;">
     <div class="pop-over-header">
-    	<span class="pop-over-header-title"><<lingo LabelModal/Title>></span>
+    	<span class="pop-over-header-title"><<tekan-lingo LabelModal/Title>></span>
     </div>
     <div>
         <div class="pop-over-content">
@@ -28,5 +28,5 @@ type: text/vnd.tiddlywiki
 </div>
     <$button class="button-link" style="float: right;width: 40%;margin-bottom: 20px;"> 
     	<$action-sendmessage $message="tm-close-tiddler"/>
-     	<$action-setfield $tiddler="$:/state/labelaction" text=""/><<lingo LabelModal/Close>>
+     	<$action-setfield $tiddler="$:/state/labelaction" text=""/><<tekan-lingo LabelModal/Close>>
     </$button>

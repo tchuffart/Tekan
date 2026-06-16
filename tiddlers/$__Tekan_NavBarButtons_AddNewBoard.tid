@@ -4,25 +4,25 @@ tags: $:/Tekan/NavBarButtons $:/Tekan/Button
 title: $:/Tekan/NavBarButtons/AddNewBoard
 type: text/vnd.tiddlywiki
 
-\define lingo-base() $:/language/plugins/tesseract/tekan/
-<$button tooltip=<<lingo Board/Create/Tooltip>> popup="$:/state/newboardstate">
+
+<$button tooltip=<<tekan-lingo Board/Create/Tooltip>> popup="$:/state/newboardstate">
 +</$button>
 <$reveal state="$:/state/newboardstate" type="popup" class="tc-popup-keep" position="below" text="showthepopup">
 <div class="pop-over">
 	<div>
 		<div class="pop-over-header">
-			<span class="pop-over-header-title"><<lingo Board/Create/Title>></span>
+			<span class="pop-over-header-title"><<tekan-lingo Board/Create/Title>></span>
 			<a href="#" class="pop-over-header-close-btn icon-sm icon-close"></a>
 		</div>
 
 
 		<div class="pop-over-content" style="max-height: 323px;">
 		<div>
-			<label><<lingo Board/Create/FieldLabel>></label>
+			<label><<tekan-lingo Board/Create/FieldLabel>></label>
             <$keyboard key="enter" actions=<<AddNewBoard>>>
-                        <$edit-text class="list-name-input" tiddler="$:/state/boardNewTitle"  placeholder=<<lingo Board/Create/Placeholder>> default=<<lingo Board/Create/Default>> tag="input" focus="yes"/>
+                        <$edit-text class="list-name-input" tiddler="$:/state/boardNewTitle"  placeholder=<<tekan-lingo Board/Create/Placeholder>> default=<<tekan-lingo Board/Create/Default>> tag="input" focus="yes"/>
 </$keyboard>
-			<div><$button style="background: -webkit-linear-gradient(top,#5AAC44 0,#519839 100%);background: linear-gradient(to bottom,#5AAC44 0,#519839 100%);" set="$:/state/newboardstate" setTo="" actions=<<AddNewBoard>>><<lingo Board/Create/Button>></$button></div>
+			<div><$button style="background: -webkit-linear-gradient(top,#5AAC44 0,#519839 100%);background: linear-gradient(to bottom,#5AAC44 0,#519839 100%);" set="$:/state/newboardstate" setTo="" actions=<<AddNewBoard>>><<tekan-lingo Board/Create/Button>></$button></div>
 		</div>
 		</div>
 	</div>
