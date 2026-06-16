@@ -7,39 +7,33 @@ type: text/vnd.tiddlywiki
 
 <div class="window-module u-clearfix">
 		<$button class="button-link" style="background: #EE6E73;color: #eee;"
-        		tooltip=<<tekan-lingo Card/Sidebar/DeleteTooltip>>><<tekan-lingo Card/Sidebar/Delete>>
+        		tooltip={{$:/language/plugins/tesseract/tekan/Card/Sidebar/DeleteTooltip}}>
+			<$text text={{$:/language/plugins/tesseract/tekan/Card/Sidebar/Delete}}/>
 			<$action-deletetiddler $tiddler=<<currentCard>>/>
             <$action-deletetiddler $filter="[tag<currentCard>]"/>
 			<$action-sendmessage $message="tm-close-tiddler"/>
             <$action-listops $tiddler=<<currentList>> $subfilter="+[remove<currentCard>]"/>
 		</$button>
-		<$button class="button-link" tooltip=<<tekan-lingo Card/Sidebar/ArchiveTooltip>>><<tekan-lingo Card/Sidebar/Archive>>
+		<$button class="button-link" tooltip={{$:/language/plugins/tesseract/tekan/Card/Sidebar/ArchiveTooltip}}>
+			<$text text={{$:/language/plugins/tesseract/tekan/Card/Sidebar/Archive}}/>
 			<$action-listops $tiddler=<<currentCard>> $tags="archive"/>
             <$action-listops $tiddler=<<currentList>> $subfilter="+[remove<currentCard>]"/>
 		</$button>
-        <$button
-        	class="button-link"
-            actions=<<archivechecklist>>
-            tooltip=<<tekan-lingo Card/Sidebar/ArchiveChecklistTooltip>>>
-            <<tekan-lingo Card/Sidebar/ArchiveChecklist>>
+        <$button class="button-link" actions=<<archivechecklist>>
+            tooltip={{$:/language/plugins/tesseract/tekan/Card/Sidebar/ArchiveChecklistTooltip}}>
+            <$text text={{$:/language/plugins/tesseract/tekan/Card/Sidebar/ArchiveChecklist}}/>
         </$button>
-        <$button
-        	class="button-link" tooltip=<<tekan-lingo Card/Sidebar/LabelTooltip>>>
-           		<$action-sendmessage
-                $message="tm-modal"
-                $param="$:/Tikan/EditCardModal/SideBar/LabelModal"
-                currentCard=<<currentCard>>/>
-            <<tekan-lingo Card/Sidebar/Label>>
+        <$button class="button-link" tooltip={{$:/language/plugins/tesseract/tekan/Card/Sidebar/LabelTooltip}}>
+			<$action-sendmessage $message="tm-modal" $param="$:/Tikan/EditCardModal/SideBar/LabelModal" currentCard=<<currentCard>>/>
+            <$text text={{$:/language/plugins/tesseract/tekan/Card/Sidebar/Label}}/>
  		</$button>
-        <$edit-date
-        	class="button-link"
+        <$edit-date class="button-link"
             attributes="$:/Tikan/EditCardModal/SideBar/DueDateAttributes"
             tiddler=<<currentCard>>
             field="duedate"
             placeholder={{$:/language/plugins/tesseract/tekan/Card/Sidebar/DueDate}}/>
-		<$button
-        	class="button-link" tooltip=<<tekan-lingo Card/Sidebar/DoneTooltip>>>
-            <<tekan-lingo Card/Sidebar/Done>>
+		<$button class="button-link" tooltip={{$:/language/plugins/tesseract/tekan/Card/Sidebar/DoneTooltip}}>
+            <$text text={{$:/language/plugins/tesseract/tekan/Card/Sidebar/Done}}/>
 			<$action-sendmessage $message="tm-close-tiddler"/>
             <$action-sendmessage $message="tm-auto-save-wiki"/>
             <$action-setfield $tiddler="$:/state/editcardtitle" text=""/>
