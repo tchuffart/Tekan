@@ -75,7 +75,9 @@ content: "&#x270e;";
        	 {{$:/Tekan/Main/ListFooter}} 
 		</div>
     </$list>
-      	{{$:/Tekan/AddList}}
+      	<div class="list" style="background:rgba(0,0,0,.15);border-radius:3px;min-height:40px;padding:8px;">
+        <$button style="color:#fff;background:transparent;border:none;font-size:14px;cursor:pointer;width:100%;text-align:left;" set="$:/state/addnewlist" setTo="list">+ Ajouter une liste</$button>
+      	</div>
    		{{$:/Tekan/RearrangeLists}}
         {{$:/Tekan/Import}}
   	</$set>
