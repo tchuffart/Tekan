@@ -25,15 +25,5 @@ type: text/vnd.tiddlywiki
 <$action-setfield $tiddler="$:/state/AddCard" text=""/>
 \end
 
-<$set name="addcardstate" value={{$:/state/AddCard}}>
-<$list filter="[<addcardstate>compare:string:ne<currentList>]" variable="ignore">
-	<$button class="tc-btn-invisible" set="$:/state/AddCard" setTo=<<currentList>>><<tekan-lingo AddCard/Button>></$button>
-</$list>
-<$list filter="[<addcardstate>compare:string:eq<currentList>]" variable="ignore">
-	<$keyboard key="ctrl+enter" actions=<<addCard>> tag="div">
-	<$edit-text autoHeight="yes" focus="yes" placeholder={{$:/language/plugins/tesseract/tekan/AddCard/Placeholder}} default={{$:/language/plugins/tesseract/tekan/AddCard/Default}} tiddler="$:/NewNote"/>
-	</$keyboard>
-	<$button class="smallgreenbutton" actions=<<addCard>>><<tekan-lingo AddCard/Add>></$button>
-	<$button class="tc-btn-invisible" style="margin: 0 5px;" actions=<<cancelCard>>>{{$:/core/images/close-button}}</$button>
-</$list>
-</$set>
+DEBUG currentList=<<currentList>>
+<$button style="display:block;color:#333;background:#fff;border:1px solid #aaa;padding:5px;width:100%;text-align:left;cursor:pointer;" set="$:/state/AddCard" setTo=<<currentList>>>+ Ajouter une tâche</$button>
