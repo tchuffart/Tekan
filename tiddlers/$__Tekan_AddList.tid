@@ -45,7 +45,8 @@ type: text/vnd.tiddlywiki
 }
 </style>
 
-<$list filter="[[list]!match{$:/state/addnewlist}]" variable="ignore">
+<$set name="addliststate" value={{$:/state/addnewlist}}>
+<$list filter="[<addliststate>compare:string:neq[list]]" variable="ignore">
 <div class="list">
 	<div style="background:rgba(0,0,0,.15);border-radius:3px;min-height:30px;padding:4px;margin:0 5px;">
 	<$button style="width:100%;text-align:left;background:transparent;border:none;color:#fff;font-size:13px;padding:7px;cursor:pointer;" set="$:/state/addnewlist" setTo="list">
@@ -54,8 +55,7 @@ type: text/vnd.tiddlywiki
 	</div>
 </div>
 </$list>
-
-<$list filter="[[list]match{$:/state/addnewlist}]" variable="ignore">
+<$list filter="[<addliststate>compare:string:eq[list]]" variable="ignore">
 <div class="list list-wrapper-add">
 	<$keyboard key="enter" actions=<<AddList>> tag="div">
 	<$edit-text default={{$:/language/plugins/tesseract/tekan/AddList/Default}} class="list-name-input" tiddler="$:/state/newlisttemp" placeholder={{$:/language/plugins/tesseract/tekan/AddList/Placeholder}} tag="input" focus="yes"/>
@@ -64,3 +64,4 @@ type: text/vnd.tiddlywiki
 	<$button class="tc-btn-invisible" style="padding: 5px;fill: #999;" actions=<<CancelList>>>{{$:/core/images/close-button}}</$button>
 </div>
 </$list>
+</$set>
